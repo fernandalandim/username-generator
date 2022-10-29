@@ -1,17 +1,33 @@
 body {
     margin: 0 0 0 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
 }
 
 .container {
     background-color: #7fffd4;
-    width: 100%;
-    height: 500px;
+    width: 40%;
+    height: 750px;
+    border-radius: 20px;
     margin: auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.result {
+    margin: 20px auto;
+}
+
+#adjective {
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+#noun {
+    font-variant: small-caps;
+    font-size: 2.2rem;
+    
 }
 
 img {
@@ -23,19 +39,10 @@ p {
     margin: 0 0;
 }
 
-#adjective {
-    font-weight: bold;
-}
 
-#noun {
-    font-variant: small-caps;
-    
-}
-
-/* Action */
 .btn {
     background-color: #f7ff8c;
-    padding: 5px 15px;
+    padding: 5px 20px;
     border-radius: 6px;
     gap: 10px;
     margin: 15px auto;
@@ -43,7 +50,9 @@ p {
     display: flex;
     flex-direction: row;
 }
+/* QA: need to figure out why the second button (Generate new adjective) makes all the buttons shrink */
 
+/* Interaction */
 .btn:hover {
     background-color: #f0f0f0;
     font-style: italic;
