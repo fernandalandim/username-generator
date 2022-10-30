@@ -21,14 +21,13 @@ const adjectives = [
   "patient",
   "pretty",
   "awesome",
-  "",
 ];
 const names = ["John", "Smith", "Mary", "Sylvia"];
 
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/floor
 const getRandomElement = (array) => {
-  const random = Math.random(); // generate number greater than or equal to 0 and less than 1  
+  const random = Math.random(); // generate number greater than or equal to 0 and less than 1
   const multipledByLength = random * array.length;
   const index = Math.floor(multipledByLength); // round down to an integer
   return array[index];
