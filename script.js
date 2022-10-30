@@ -2,7 +2,7 @@
 // Icon + adjective + noun
 const $avatar = document.getElementById("avatar");
 const $adjective = document.getElementById("adjective");
-const $noun = document.getElementById("noun")
+const $name = document.getElementById("name");
 
 // Buttons
 const $newAvatar = document.getElementById("newAvatar");
@@ -11,20 +11,39 @@ const $newName = document.getElementById("newName");
 const $refresh = document.getElementById("refresh");
 
 // Content
-const emoji = [""];
+const emojis = ["😀", "😁", "🥳", "😡"];
+const adjectives = [
+  "handsome",
+  "bully",
+  "resourceful",
+  "appropriate",
+  "busy",
+  "patient",
+  "pretty",
+  "awesome",
+  "",
+];
+const names = ["John", "Smith", "Mary", "Sylvia"];
 
-const adjective = {
-    "handsome", "bully", "resourceful", "appropriate", "busy", "patient", "pretty", "awesome", ""
-}
-
-// for (let i = 127904; i < 127968; i++) {
-//     $avatar.innerHTML += `<div class="emoji">
-//     <p>&#${i};</p>
-//     </div>`;
-//     console.log("icons")
-// }
+const getRandomElement = (array) => {
+  return array[Math.ceil(Math.random() * array.length - 1)];
+};
 
 // Interactios
-$newAvatar.addEventListener("click") {
-    console.log("clicked")
-}
+$newAvatar.addEventListener("click", (event) => {
+  $avatar.innerText = getRandomElement(emojis);
+});
+
+$newAdjective.addEventListener("click", (event) => {
+  $adjective.innerText = getRandomElement(adjectives);
+});
+
+$newName.addEventListener("click", (event) => {
+  $name.innerText = getRandomElement(names);
+});
+
+$refresh.addEventListener("click", (event) => {
+  $avatar.innerText = "";
+  $adjective.innerText = "Lorem";
+  $name.innerText = "ipsum";
+});
